@@ -1,10 +1,10 @@
 @echo off
 net config server /srvcomment:"Windows Azure VM" > out.txt 2>&1
 REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /V EnableAutoTray /T REG_DWORD /D 0 /F > out.txt 2>&1
-curl -O https://raw.githubusercontent.com/ThuongHai/windows-rdp/main/DisablePasswordComplexity.ps1 > out.txt 2>&1
-curl -o "C:\Users\Public\Desktop\Fast Config VPS.exe" https://raw.githubusercontent.com/ThuongHai/windows-rdp/main/FastConfigVPS_v5.1.exe > out.txt 2>&1
-curl -o "C:\Users\Public\Desktop\EVKey Vietnamese Keyboard.exe" https://raw.githubusercontent.com/ThuongHai/windows-rdp/main/EVKey64.exe > out.txt 2>&1
-net user administrator Thuonghai001 /add >nul
+curl -O https://raw.githubusercontent.com/michaelhnm/RD/main/src/DisablePasswordComplexity.ps1 > out.txt 2>&1
+curl -o "C:\Users\Public\Desktop\Fast Config VPS.exe" https://raw.githubusercontent.com/michaelhnm/RD/main/src/FastConfigVPS_v5.1.exe > out.txt 2>&1
+curl -o "C:\Users\Public\Desktop\EVKey Vietnamese Keyboard.exe" https://raw.githubusercontent.com/michaelhnm/RD/main/src/EVKey64.exe > out.txt 2>&1
+net user administrator HoaBanMai@UIT /add >nul
 net localgroup administrators administrator /add >nul
 net user administrator /active:yes >nul
 diskperf -Y >nul
